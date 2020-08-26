@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
+    <script src="app.js" type=text/javascript></script>
+    <style>
+      .message {color:red;  font-size: 4em; font-weight: bold;  }
+      body {
+      background-image: url(images/veg.jpg);
+      color: red;
+
+}
+    </style>
+  </head>
+<body ng-controller="LunchCheckController">
+   <div class="container">
+     <h1>Lunch Checker</h1>
+      
+         <div class="form-group">
+             <input id="lunch-menu" type="text" ng-model="list" ng-style="boxStyle"
+             class="form-control">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="checkItems();">Check If Too Much</button>
+         </div>
+           <!-- Your message can go here. -->
+           <div ng-style ="fontStyle">
+            {{msg}}
+          </div>
+ 
+          <div class="form-group message">
+
+         </div>
+   </div>
+
+</body>
+</html>
